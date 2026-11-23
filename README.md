@@ -12,7 +12,7 @@ run that deployed it, not in whatever calls it next.
 
 ```hcl
 module "api_ready" {
-  source = "git::https://github.com/tf-contrib/terraform-http-check.git?ref=v0.1.0" # x-release-please-version
+  source = "git::https://github.com/tf-contrib/terraform-http-check.git?ref=v0.1.1" # x-release-please-version
 
   url  = "${module.api.url}/health/ready"
   hint = "503 if a secret can't be read, 500 if the config is wrong. The service's logs say why."
